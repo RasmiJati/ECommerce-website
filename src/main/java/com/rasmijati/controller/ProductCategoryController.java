@@ -21,12 +21,13 @@ public class ProductCategoryController {
         ProductCategory pc = new ProductCategory(1L, "abc", "food");
         productCategoryRepository.create(pc);
         System.out.println("Creation Successful");
-        
+
         System.out.println("Display" + productCategoryRepository.allRecord());
-       
-        productCategoryRepository.delete(pc);        
-        System.out.println("Deletion Successful!!: ");
-        System.out.println("Display" + productCategoryRepository.allRecord());
+
+        System.out.println("Display By id " + productCategoryRepository.recordById(1L));
+
+        productCategoryRepository.delete(pc);
+        System.out.println("Deletion Successful!!: " + productCategoryRepository.allRecord());
 
     }
 }
