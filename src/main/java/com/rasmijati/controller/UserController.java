@@ -19,10 +19,10 @@ public class UserController {
 
     public static void main(String[] args) {
         userRepository = new UserRepository();
-        User u = new User(1L, "rasmi", "rasmi@gmail.com", "rasmi", "rasmi", UserType.USER);
+        User u = new User(1L, "rasmi", "dfdf", "9852634178","rasmi@gmail.com", "rasmi", "rasmi", UserType.USER);
         userRepository.create(u);
         System.out.println("User list : " + userRepository.allRecord());
-        User u1 = new User(1L, "admin", "admin@gmail.com", "admin", "admin", UserType.ADMIN);
+        User u1 = new User(1L, "admin","addih","9585255555", "admin@gmail.com", "admin", "admin", UserType.ADMIN);
         userRepository.edit(u1);
         System.out.println("User list edit : " + userRepository.allRecord());
         System.out.println("By id : " + userRepository.recordById(1L));

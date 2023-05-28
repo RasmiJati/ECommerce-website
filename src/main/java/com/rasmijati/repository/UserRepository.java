@@ -44,6 +44,8 @@ public class UserRepository {
     public void edit(User u){
         this.userList.stream().filter(x->x.getId().equals(u.getId())).forEach(user -> {
             user.setName(u.getName());
+            user.setAddress(u.getAddress());
+            user.setPhone(u.getPhone());
             user.setEmail(u.getEmail());
             user.setPassword(u.getPassword());
             user.setRepassword(u.getRepassword());
