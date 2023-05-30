@@ -37,4 +37,12 @@ public abstract class AbstractRepository<T extends IEntity> {
         }
         return null;
     }
+
+    public void delete(T t){
+        this.list.remove(t);
+    }
+    
+    public void edit(T t) {
+
+    }
 }

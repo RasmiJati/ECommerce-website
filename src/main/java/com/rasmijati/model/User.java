@@ -11,7 +11,7 @@ import java.util.Objects;
  *
  * @author admin
  */
-public class User {
+public class User implements IEntity {
 
     private Long id;
     private String name;
@@ -36,10 +36,12 @@ public class User {
         this.userType = userType;
     }
 
+    @Override
     public Long getId() {
         return id;
     }
 
+    @Override
     public void setId(Long id) {
         this.id = id;
     }
