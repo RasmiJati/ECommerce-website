@@ -106,7 +106,7 @@ public class UserController {
             break;
         }
         while (userType == null) {
-            System.out.println("Enter user type: ");
+            System.out.println("Enter user type (ADMIN / USER / CUSTOMER) : ");
             String input = sc.nextLine().toUpperCase();
 
             try {

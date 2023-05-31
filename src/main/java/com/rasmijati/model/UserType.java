@@ -10,5 +10,7 @@ package com.rasmijati.model;
  * @author admin
  */
 public enum UserType {
-    ADMIN , USER, SUPPLIER, CUSTOMER ,;
+    ADMIN,
+    USER,
+    CUSTOMER
 }
