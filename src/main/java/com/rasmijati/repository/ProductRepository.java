@@ -6,42 +6,16 @@
 package com.rasmijati.repository;
 
 import com.rasmijati.model.Product;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
  * @author admin
  */
-public class ProductRepository {
-    private List<Product> productList;
+public class ProductRepository extends AbstractRepository<Product>{
 
-    public ProductRepository() {
-        this.productList = new ArrayList<>();
-    }
-    
-    public void create(Product p){
-        this.productList.add(p);
-    }
-    
-    public List<Product> allRecord(){
-        return this.productList;
-    }
-    
-    public Product recordById(Long id){
-        for(Product p : productList){
-            if(p.getId().equals(id))
-                return p;
-        }
-        return null;
-    }
-    
-    public void delete(Product p){
-        this.productList.remove(p);
-    }
-    
+    @Override
     public void edit(Product p){
-        this.productList.stream().filter(x->x.getId().equals(p.getId())).forEach(product -> {
+        super.allRecord().stream().filter(x->x.getId().equals(p.getId())).forEach(product -> {
             product.setTitle(p.getTitle());
             product.setDescription(p.getDescription());
             product.setKeyword(p.getKeyword());

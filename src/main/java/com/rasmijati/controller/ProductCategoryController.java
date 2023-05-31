@@ -130,8 +130,6 @@ public class ProductCategoryController {
             while (description == null || description.isEmpty()) {
                 System.out.println("Enter description: ");
                 description = sc.nextLine();
-//                sc.next()--> reads a single word until the next space 
-//                sc.nextLine() to read the entire line
                 break;
             }
             ProductCategory pc = new ProductCategory(id, title, description);

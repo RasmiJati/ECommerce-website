@@ -11,7 +11,7 @@ import java.util.Objects;
  *
  * @author admin
  */
-public class Category {
+public class Category implements IEntity{
 
     private Long id;
     private String title;
@@ -26,10 +26,12 @@ public class Category {
         this.description = description;
     }
 
+    @Override
     public Long getId() {
         return id;
     }
 
+    @Override
     public void setId(Long id) {
         this.id = id;
     }

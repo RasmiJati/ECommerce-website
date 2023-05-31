@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author admin
  */
-public class Product {
+public class Product implements IEntity{
     private Long id;
     private String title;
     private BigDecimal price;
@@ -34,10 +34,12 @@ public class Product {
         this.category = category;
     }
 
+    @Override
     public Long getId() {
         return id;
     }
 
+    @Override
     public void setId(Long id) {
         this.id = id;
     }

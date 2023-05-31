@@ -10,7 +10,7 @@ import java.util.Objects;
  *
  * @author admin
  */
-public class ProductCategory {
+public class ProductCategory implements IEntity{
 
     private Long id;
     private String title;
@@ -25,10 +25,12 @@ public class ProductCategory {
         this.description = description;
     }
 
+    @Override
     public Long getId() {
         return id;
     }
 
+    @Override
     public void setId(Long id) {
         this.id = id;
     }
